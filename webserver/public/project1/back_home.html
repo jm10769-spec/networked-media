@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Back home</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>In Warm Sweet HomeHomen🏠🥰</h1>
+        <div class="narrator-bubble">
+            <p class="narrator" id="narrator-text"></p>
+        </div>
+        <div class="button-container">
+            <a href="sleep.html"><button class="favorite styled" type="button" id="button1" style="display: none;">Go to Sleep Directly</button></a>
+            <a href="do_homework.html"><button class="favorite styled" type="button" id="button2" style="display: none;">Do Homework</button></a>
+        </div>
+        
+        <script>
+            const fullText = "You finally made it back to your warm and cozy dorm after a long day. You feel relieved and happy to be home. Now you can choose to either go to sleep directly or do some homework before bed.";
+            const narratorElement = document.getElementById('narrator-text');
+            const button1 = document.getElementById('button1');
+            const button2 = document.getElementById('button2');
+            let index = 0;
+            function typeText() {
+                if (index < fullText.length) {
+                    narratorElement.textContent += fullText.charAt(index);
+                    index++;
+                    setTimeout(typeText, 50); 
+                } else {
+                    //Show buttons after all text is displayed
+                    button1.style.display = 'block';
+                    button2.style.display = 'block';
+                }
+            }
+            
+            //animation when page loads
+            window.addEventListener('load', typeText);
+        </script>
+    </body>
+</html>

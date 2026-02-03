@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>take shuttle</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>You go and wait at the shuttle station 🛑</h1>
+        <div class="narrator-bubble">
+            <p class="narrator" id="narrator-text"></p>
+        </div>
+        <a href="take_subway.html"><button class="favorite styled" type="button" id="single-button" style="display: none;">Go and Take Subway</button></a>
+        
+        <script>
+            const fullText = "Unfortunately, the shuttle is taking forever to arrive and now the weather is freezing cold. You decide to give up and take the subway instead to make sure you get home.";
+            const narratorElement = document.getElementById('narrator-text');
+            const singleButton = document.getElementById('single-button');
+            let index = 0;
+            function typeText() {
+                if (index < fullText.length) {
+                    narratorElement.textContent += fullText.charAt(index);
+                    index++;
+                    setTimeout(typeText, 50); 
+                } else {
+                    //Show button after all text is displayed
+                    singleButton.style.display = 'block';
+                }
+            }
+            
+            //animation when page loads
+            window.addEventListener('load', typeText);
+        </script>
+    </body>
+</html>

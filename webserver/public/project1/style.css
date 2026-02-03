@@ -1,0 +1,215 @@
+body {
+  background-color: rgba(254, 253, 251, 0.741);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Georgia', 'Garamond', serif;
+  font-size: 80px;
+  text-align: center;
+  margin: 0;
+}
+/* narrator bubble */
+.narrator-bubble {
+  margin-top: 20px;
+  max-width: 600px;
+}
+.narrator {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+  line-height: 1.6;
+  min-height: 80px;
+}
+/* button container */
+.button-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  justify-content: center;
+}
+/* single button */
+.styled {
+  border: 0;
+  line-height: 3.5;
+  padding: 0 40px;
+  font-size: 1.3rem;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: rgb(255, 165, 165);
+  background-image: linear-gradient(
+    to top left,
+    rgb(0 0 0 / 0.2),
+    rgb(0 0 0 / 0.2) 30%,
+    transparent
+  );
+  box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 0.6),
+    inset -2px -2px 3px rgb(0 0 0 / 0.6);
+}
+.styled:hover {
+  background-color: rgb(255, 168, 221);
+}
+.styled:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 0.6),
+    inset 2px 2px 3px rgb(0 0 0 / 0.6);
+}
+
+/* email layout */
+.email-description {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0;
+  color: rgba(0, 0, 0, 0.7);
+  max-width: 800px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+.email-container {
+  width: 85%;
+  max-width: 750px;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+.email-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.form-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.form-field label {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  min-width: 50px;
+}
+.form-field input {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: 'Arial', sans-serif;
+}
+.form-field input[readonly] {
+  background-color: rgba(200, 200, 200, 0.3);
+  cursor: not-allowed;
+}
+.compose-box-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.compose-box {
+  flex: 1;
+  padding: 15px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-family: 'Arial', sans-serif;
+  resize: none;
+}
+.compose-box:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(200, 100, 100, 0.3);
+}
+.submit-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  padding: 8px 20px !important;
+  line-height: 1.3 !important;
+  font-size: 0.9rem !important;
+}
+
+/* subway stations */
+.subway-map {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.map-wrapper {
+  position: relative;
+  width: 600px;
+  height: 400px;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 100%;
+  background-color: rgb(255, 140, 0);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.stations {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 2;
+}
+
+.station {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: rgb(255, 140, 0);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 3px solid white;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 3;
+}
+
+.station:hover {
+  background-color: rgb(255, 165, 0);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.station:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>arrive_370JaySt</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Arrived at 370 Jay St🥰</h1>
+        <div class="narrator-bubble">
+            <p class="narrator" id="narrator-text"></p>
+        </div>
+        <div class="button-container">
+            <a href="go_home.html"><button class="favorite styled" type="button" id="button1" style="display: none;">Coding is so fun!</button></a>
+            <a href="go_home.html"><button class="favorite styled" type="button" id="button2" style="display: none;">Coding kills me...</button></a>
+        </div>
+        
+        <script>
+            const fullText = "Congratulations! You have arrived at the Networked-Media Class right on time. What do you think of this class?";
+            const narratorElement = document.getElementById('narrator-text');
+            const button1 = document.getElementById('button1');
+            const button2 = document.getElementById('button2');
+            let index = 0;
+            function typeText() {
+                if (index < fullText.length) {
+                    narratorElement.textContent += fullText.charAt(index);
+                    index++;
+                    setTimeout(typeText, 50); 
+                } else {
+                    //Show buttons after all text is displayed
+                    button1.style.display = 'block';
+                    button2.style.display = 'block';
+                }
+            }
+            
+            //animation when page loads
+            window.addEventListener('load', typeText);
+        </script>
+    </body>
+</html>
