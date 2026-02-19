@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>luopan</title>
+    <link rel ="stylesheet" href="style.css">
+    <script src="data.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="dist/chinese_lunar_calendar.min.js"></script>
+</head>
+<body>
+<div class="container" id="app">
+    <div class="main">
+        <div class="year time_black active">丙午年</div>
+        <div class="month" v-bind:style="{transform:'rotate('+monthRotate+'deg)'}">
+            <div class="year"  v-for="(e,index) of monthList" v-text="e.content"
+                 :class="{'active': e.active}"
+                 v-bind:style="{transform: 'translateX('+e.translateX+'px) translateY('+e.translateY+'px) rotate('+e.rotate+'deg)'}">1月</div>
+        </div>
+        <div class="date" v-bind:style="{transform:'rotate('+dateRotate+'deg)'}">
+            <div class="year"  v-for="(e,index) of dateList" v-text="e.content"
+                 :class="{'active': e.active}"
+                 v-bind:style="{transform: 'translateX('+e.translateX+'px) translateY('+e.translateY+'px) rotate('+e.rotate+'deg)'}">1月</div>
+        </div>
+        <div class="solar" v-bind:style="{transform:'rotate('+solarRotate+'deg)'}">
+            <div class="year"  v-for="(e,index) of solarList" v-text="e.content"
+                 :class="{'active': e.active}"
+                 v-bind:style="{transform: 'translateX('+e.translateX+'px) translateY('+e.translateY+'px) rotate('+e.rotate+'deg)'}">1月</div>
+        <div class="oldHours" v-bind:style="{transform:'rotate('+oldHoursRotate+'deg)'}">
+            <div class="year"  v-for="(e,index) of oldHoursList" v-text="e.content"
+                 :class="{'active': e.active}"
+                 v-bind:style="{transform: 'translateX('+e.translateX+'px) translateY('+e.translateY+'px) rotate('+e.rotate+'deg)'}">1月</div>
+        </div>
+        <div class="hours" v-bind:style="{transform:'rotate('+hoursRotate+'deg)'}">
+            <div class="year"  v-for="(e,index) of hoursList" v-text="e.content"
+                 :class="{'active': e.active}"
+                 v-bind:style="{transform: 'translateX('+e.translateX+'px) translateY('+e.translateY+'px) rotate('+e.rotate+'deg)'}">1月</div>
+        </div>
+        <div class="minute" v-bind:style="{transform:'rotate('+minuteRotate+'deg)'}">
+            <div class="year"  v-for="(e,index) of minuteList" v-text="e.content"
+                 :class="{'active': e.active}"
+                 v-bind:style="{transform: 'translateX('+e.translateX+'px) translateY('+e.translateY+'px) rotate('+e.rotate+'deg)'}">1月</div>
+        </div>
+        <div class="second" v-bind:style="{transform:'rotate('+secondRotate+'deg)'}">
+            <div class="year"  v-for="(e,index) of secondList" v-text="e.content"
+                 :class="{'active': e.active}"
+                 v-bind:style="{transform: 'translateX('+e.translateX+'px) translateY('+e.translateY+'px) rotate('+e.rotate+'deg)'}">1月</div>
+        </div>
+        <div class="hand"></div>
+    </div>
+</div>
+<script type="module">
+    import { initClockApp } from './data.js';
+    window.onload = function () {
+        initClockApp();
+    }
+</script>
+<a href="index2.html" class="whole">Look at whole graph</a>
+</body>
+</html>
