@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="diary-bg">
+      <div id="diary-cover"></div>
+      <div class="scene-title">
+        <div class="scene-zh">残  卷</div>
+        <div class="scene-en">The Broken Diary</div>
+      </div>
+      <div class="return-btn" id="return-btn">&#9664; 歸&nbsp;&nbsp;Return</div>
+      <div id="book-container">
+        <div id="book-left-arrow"><img src="/elements/left.png" alt="prev"></div>
+        <div id="book-wrap">
+          <img id="book-img" src="/elements/openbook.png" alt="book">
+          <div id="book-left-page"></div>
+          <div id="book-right-page"></div>
+        </div>
+        <div id="book-right-arrow"><img src="/elements/right.png" alt="next"></div>
+      </div>
+    </div>
+
+    <div id="diary-quote">
+      <div class="dq-zh">一本殘破的日記，似乎有人寫下了些什麼...</div>
+      <div class="dq-en">A weathered diary. Seems like someone once left their words here...</div>
+    </div>
+
+    <div id="write-btn"><img src="/elements/write.png" alt="Write"></div>
+    <div id="note-modal">
+      <div id="note-inner">
+        <textarea id="note-finding"></textarea>
+        <input type="text" id="note-nickname">
+        <div id="note-btns">
+          <div id="btn-leave"><img src="/elements/leave_button.png" alt="Leave"></div>
+          <div id="btn-record"><img src="/elements/record_button.png" alt="Record"></div>
+        </div>
+      </div>
+    </div>
+
+    <template id="entry-tpl">
+      <div class="book-entry">
+        <p class="entry-finding"></p>
+        <p class="entry-by"></p>
+      </div>
+    </template>
+
+    <div id="blackout"></div>
+    <script src="/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gate of Parting</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="gate-bg" class="scene-bg">
+      <div class="scene-title">
+        <div class="scene-zh">入 徑</div>
+        <div class="scene-en">The Gate of Parting</div>
+      </div>
+      <div class="return-btn" id="return-btn">&#9664; 歸&nbsp;&nbsp;Return</div>
+      <div class="dig-btn" id="dig-1"><img src="/elements/dig.png" alt="Dig"></div>
+      <div class="dig-btn" id="dig-2"><img src="/elements/dig.png" alt="Dig"></div>
+    </div>
+    <div id="blackout"></div>
+    <div id="nofound-overlay"><img src="/elements/nofound.png" alt=""></div>
+    <div id="greedy-overlay"><img src="/elements/greedy.png" alt=""></div>
+    <div id="found-modal">
+      <div class="found-inner">
+        <p class="found-congrats">Congratulation! You Found:</p>
+        <h2 class="found-name"></h2>
+        <p class="found-story"></p>
+        <div class="found-btns">
+          <button class="found-btn" id="btn-diary">Open Diary 留記</button>
+          <button class="found-btn" id="btn-close">Close 闔卷</button>
+        </div>
+      </div>
+    </div>
+    <script src="/main.js"></script>
+  </body>
+</html>
